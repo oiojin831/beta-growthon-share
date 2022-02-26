@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export async function getStaticProps({ params }) {
   const res = await fetch(
-    `http://dev.xhangers.com:7000/post/public/${params.shareId}`
+    `http://beta.growthon.io:7000/mission/detailcode/${params.shareId}`
   );
   const shareData = await res.json();
   return {
@@ -16,7 +16,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  return { paths: [{ params: { shareId: "WlAhkfW8" } }], fallback: "blocking" };
+  return { paths: [{ params: { shareId: "N2FZ84" } }], fallback: "blocking" };
 }
 
 function IndexPage({ shareData }) {
@@ -24,7 +24,7 @@ function IndexPage({ shareData }) {
   const { shareId } = router.query;
 
   useEffect(() => {
-    Router.push(`http://beta.growthon.io/post/${shareId}`);
+    Router.push(`http://beta.growthon.io/mission/${shareId}`);
   }, [shareId]);
 
   return (
@@ -35,7 +35,7 @@ function IndexPage({ shareData }) {
           content={shareData.post?.mission_name}
           key="title"
         />
-        <meta property="og:image" content={`${shareData.post?.path}`} />
+        <meta property="og:image" content={`/growthon_logo.png`} />
       </Head>
     </div>
   );
