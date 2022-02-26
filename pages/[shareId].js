@@ -16,7 +16,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  return { paths: [{ params: { shareId: "WlAhkfW8" } }], fallback: "blocking" };
+  return { paths: [{ params: { shareId: "rTzRrFXM" } }], fallback: "blocking" };
 }
 
 function IndexPage({ shareData }) {
