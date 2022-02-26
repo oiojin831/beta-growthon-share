@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export async function getStaticProps({ params }) {
   const res = await fetch(
-    `http://dev.xhangers.com:7000/post/public/${params.shareId}`
+    `http://beta.growthon.io:7000/post/public/${params.shareId}`
   );
   const shareData = await res.json();
   return {
