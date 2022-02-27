@@ -35,7 +35,7 @@ function IndexPage({ shareData }) {
           content={shareData[0]?.mission_name}
           key="title"
         />
-        <meta property="og:image" content={`/growthon_logo.png`} />
+        <meta property="og:image" content={`/growthon_logo_square.png`} />
       </Head>
     </div>
   );
